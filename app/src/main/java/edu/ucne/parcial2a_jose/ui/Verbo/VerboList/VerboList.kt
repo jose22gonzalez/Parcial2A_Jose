@@ -3,10 +3,9 @@ package edu.ucne.parcial2a_jose.ui.Verbo.VerboList
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -36,7 +35,7 @@ fun VerboList(
             .padding(it)) {
             Verbolist(verbo = uiState.verbo)
         }
-}
+    }
 }
 
 @Composable
@@ -81,7 +80,7 @@ fun VerboRow(verboDTO: VerboDTO) {
 
                 AsyncImage(
                     model = "${verboDTO.Imagen}",
-                    contentDescription = null
+                    contentDescription = "dhjd"
                 )
             }
         }

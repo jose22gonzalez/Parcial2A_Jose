@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface apiverbo {
 
-    @GET("api/verbos")
-    suspend fun Getverbos(): Response<List<VerboDTO>>
+    @GET("verbos")
+    suspend fun Getverbos(): List<VerboDTO>
 }

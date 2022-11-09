@@ -11,9 +11,12 @@ class respositoryverbo @Inject constructor(
     private val apiverbo: apiverbo
 ){
     suspend fun GetVerbos(): List<VerboDTO> {
-        return withContext(Dispatchers.IO){
-            val resposnse = apiverbo.Getverbos()
-            resposnse.body()?: emptyList()
+        try {
+            val verbo = apiverbo.Getverbos()
+            return  verbo
+        }catch (e: Exception){
+            throw e
         }
+
     }
 }
